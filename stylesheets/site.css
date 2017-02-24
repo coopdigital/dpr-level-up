@@ -6,8 +6,17 @@
 .l-box {
   padding: 1em; }
 
+.enhancement-box {
+  width: 33%;
+  padding-right: 0.5em; }
+  .enhancement-box:last-child {
+    padding-right: 0em; }
+
 .enhancement {
-  background: red; }
+  border: 1px solid red;
+  padding: 0.5em;
+  height: 100px;
+  margin-bottom: 1em; }
 
 .is-centered {
   text-align: center; }
