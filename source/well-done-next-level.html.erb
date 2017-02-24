@@ -5,7 +5,7 @@ title: Level Up
 <h1 class='is-centered'>Well done, you've reached level [?]</h1>
 
 <p>
-You've committed to growing your pot by £60 per month.
+  You've committed to growing your pot by <span id="enhancement-monthly-amount">...</span> per month.
 </p>
 
 <p>
@@ -14,3 +14,13 @@ Over time this will turn into income that is paid to you, without working.
 
 
 <%= link_to("View your pot", "view-your-pot") %>
+
+<script>
+
+ready(function() {
+  var enhancementMonthlyAmount = document.getElementById('enhancement-monthly-amount');
+
+  enhancementMonthlyAmount.innerHTML = getEnhancementProperty('monthlyAmount');
+});
+
+</script>

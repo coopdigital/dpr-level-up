@@ -38,13 +38,17 @@ title:
 
 var enhancements = [
   {'id': 'coffee',
-   'friendlyName': 'one coffee each week day',
-   'monthlyValue': '£60',
+   'friendlyName': 'one coffee a day',
+   'moneyPerTime': '£3 a day',
+   'monthlyAmount': '£60',
+   'incomeTwentyYears': '£TODO',
    'imagePath': 'coffee-graph.png',
   },
   {'id': 'beer',
-   'friendlyName': 'four beers each weekend',
-   'monthlyValue': '£80',
+   'friendlyName': 'four pints each weekend',
+   'moneyPerTime': '£20 a week',
+   'monthlyAmount': '£90',
+   'incomeTwentyYears': '£TODO',
    'imagePath': 'beer-graph.png',
   }
 ];
@@ -80,12 +84,13 @@ function setCurrentEnhancement(enhancement) {
   console.log(enhancement);
 
 
-  showMeButton.innerHTML = 'Show me how ' + enhancement.monthlyValue + ' a month will enhance my life';
+  showMeButton.innerHTML = 'Show me how ' + enhancement.monthlyAmount + ' a month will enhance my life';
   graphImg.src = '../images/' + enhancement.imagePath;
 
   removeClass(showMeButton, 'visuallyhidden');
   removeClass(graphImg, 'visuallyhidden');
 
+  localStorage.setItem("enhancement", JSON.stringify(enhancement));
 }
 
 </script>
