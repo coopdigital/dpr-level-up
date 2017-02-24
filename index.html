@@ -20,30 +20,53 @@
         <h1 class='is-centered'>Level Up</h1>
 <p>What do you want to achieve?</p>
 
+  <p>
+    <a href="well-done-set-a-goal" class='set-goal' id="sack-boss">
+      Never have to answer to your boss again
+    </a>
+  </p>
+  <p>
+    <a href="well-done-set-a-goal" class='set-goal' id="dont-worry-about-money">
+      Never have to worry about money
+    </a>
+  </p>
+  <p>
+    <a href="well-done-set-a-goal" class='set-goal' id="choose-your-work">
+      Choose the work you want to do
+    </a>
+  </p>
+  <p>
+    <a href="well-done-set-a-goal" class='set-goal' id="spend-time-with-family">
+      Spend all your time with the people you love
+    </a>
+  </p>
 
-<form class="pure-form">
-  <label for="option-one" class="pure-radio">
-    <input id="option-one" type="radio" name="goal" value="1">
-    Never have to answer to your boss again
-  </label>
+<script>
+  var goals = [{"friendlyTitle":"Never have to answer to your boss again","id":"sack-boss","congratsContent":"You're never going to have to work for them again!"},{"friendlyTitle":"Never have to worry about money","id":"dont-worry-about-money","congratsContent":"Worrying about money will be a thing of the past!"},{"friendlyTitle":"Choose the work you want to do","id":"choose-your-work","congratsContent":"You'll be able to do what matters to you"},{"friendlyTitle":"Spend all your time with the people you love","id":"spend-time-with-family","congratsContent":"You'll have all the time in the world for your loved ones"}];
 
-  <label for="option-two" class="pure-radio">
-    <input id="option-two" type="radio" name="goal" value="2">
-    Never have to worry about money
-  </label>
+  function getGoalForId(id) {
+    for (var i = 0; i < goals.length; i++) {
+      if (goals[i].id == id) {
+        return goals[i];
+      }
+    }
+    console.error('No goal found for id ' + id);
+  }
 
-  <label for="option-three" class="pure-radio">
-    <input id="option-three" type="radio" name="goal" value="3">
-    Choose the work you want to do
-  </label>
+  function writeGoal(goal) {
+    localStorage.setItem("goal", JSON.stringify(goal));
+  }
 
-  <label for="option-four" class="pure-radio">
-    <input id="option-four" type="radio" name="goal" value="4">
-    Spend all your time with the people you love
-  </label>
-
-  <button type="submit" class="pure-button pure-button-primary">That's me</button>
-</form>
+  ready(function() {
+    var goalLinks = document.getElementsByClassName('set-goal');
+    for (var i = 0; i < goalLinks.length; i++) {
+      goalLink = goalLinks[i];
+      goalLink.addEventListener('click', function(event) {
+        writeGoal(getGoalForId(event.target.id));
+      });
+    }
+  });
+</script>
 
       </div>
     </div>
