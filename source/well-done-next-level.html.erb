@@ -2,7 +2,11 @@
 title: Level Up
 ---
 
-<h1 class='is-centered'>Well done, you've reached level [?]</h1>
+<img src="/images/level-2.svg" class="level-image" />
+
+<h1 class='is-centered'>Well done, you've reached level 2</h1>
+
+<img src="/images/well-done.svg" class="well-done-image" />
 
 <p>
   You've committed to growing your pot by <span id="enhancement-monthly-amount">...</span> per month.
@@ -13,7 +17,7 @@ Over time this will turn into income that is paid to you, without working.
 </p>
 
 
-<%= link_to("View your pot", "view-your-pot") %>
+<%= link_to("View your pot", "view-your-pot", class: 'pure-button pure-button-primary button-xlarge') %>
 
 <script>
 

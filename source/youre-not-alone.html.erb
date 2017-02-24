@@ -6,15 +6,79 @@ title:
   You're not alone
 </h1>
 
-<p>
-James is well on his way
+<div id="sack-boss-case-study" class="case-study">
+  <p>
+    Marian studied photography, but ended up in a stressful job in marketing. She wanted to break free, and was prepared to make some big spending cuts to achieve her goal.
+  </p>
+  <p>
+    “I decided I needed to make a change. I read around to see how other people had escaped and came up with a plan. I spent a year preparing for the day when I was going to hand in my resignation. I moved back in with my parents and saved as much of my salary as I could. I stopped spending on anything that was not necessary - clothes, eating out, taxis. I joined my local library and cycled to work.”
+  </p>
+  <h2>
+    Countdown to freedom
+  </h2>
+  <p>
+    “I worked evenings and weekends for a year. Every penny went into my investment account. It was tough but it was worth it. Now the income from the money I saved last year gives me enough to live on while I get started as a photographer. I still live frugally - and I love it! I’m in control of my life and my future.”
 </p>
-<ul>
-  <li>Sold his car</li>
-</ul>
+</div>
 
-<p>
-[case study, aspirational, talk to the goal]
-</p>
+<div id="dont-worry-about-money-case-study" class="case-study">
+  <p>
+    Chris was always out of cash by the end of the month, and the amount he owed wasn’t going down. With credit card debts to clear and a student loan, money was always a source of worry.
+  </p>
+  <p>
+    “I had a moment when I realised I’d never have the things my parents did - a home, a family, a fun retirement. And I couldn’t understand why. I started going back through my statements and seeing what I was spending money on. Even though I was always stressing about money, I was blowing  it on things to make me less stressed - the pub after work, eating out, bars and gigs.”
+  </p>
+  <h2>
+    Knowledge is power
+  </h2>
+  <p>
+    “I started setting a budget. Now I have a bit of money at the end of the month which is great. Some goes towards paying off debts, and some I invest which pays me a small income. When I think about money now, I’m much more relaxed. I’m not there yet, but I’m getting there.”
+  </p>
+</div>
 
-<%= link_to("Let's do it", "you-need-to-make") %>
+<div id="choose-your-work-case-study" class="case-study">
+  <p>
+    Marie was finally earning the salary she wanted. She was able to afford a lot more stuff, but she was still stressed out.
+  </p>
+  <p>
+    "Working full time was taking its toll. I had to work out what was really important to me. I used to think new clothes every month made me happy. I used to think the gym was the only option, and that the stress of my job meant I deserved all those little treats. But the reality was that these things were a trap. I was working to live and living to work.
+  </p>
+  <h2>
+    Needs not wants
+  </h2>
+  <p>
+    “Now I run instead of paying for the gym and make a pack lunch instead of eating in a cafe. These 2 simple changes save me thousands of pounds a year. I’ve cut out a lot of other expenses, and I don’t miss them. I invest the money I save and the income from that means I now work 4 days a week. In 5 years I’ll work 2 days a week, so I can spend more time volunteering, which I love.”
+  </p>
+</div>
+
+<div id="spend-time-with-family-case-study" class="case-study">
+  <p>
+    Mark was leaving for work before his children woke up. When an old friend asked him to be his best man, Mark realised they'd not seen each other for 4 years. How did this happen?
+  </p>
+  <p>
+    “I needed to make time for the people in my life who are important to me - which meant working less. I was able to go down to 4 days a week, but we really noticed the drop in income. We had to save, and I couldn’t see how. Where did our money go? A quick look around our kids' bedrooms told us the answer; expensive toys, clothes and gadgets.”
+  </p>
+  <h2>
+    Time is precious
+  </h2>
+  <p>
+    “We had an honest discussion about spending. The kids were great - they went through all their things and made a huge pile of stuff to sell on eBay. Now invest the money we save in stocks and shares ISAs for their future. We buy stuff second hand now - or do without. I get to spend more time with the family, and you can't put a price on that.”
+  </p>
+</div>
+
+<%= link_to("Let's do it", "you-need-to-make", class: 'pure-button pure-button-primary button-xlarge') %>
+
+<script>
+  ready(function() {
+    caseStudies = document.getElementsByClassName('case-study')
+    for ( var i = 0; i < caseStudies.length; i++ ) {
+      caseStudies[i].style.display = 'none';
+    }
+
+
+    goalId = getGoalProperty('id');
+    caseStudyId = goalId + "-case-study";
+    caseStudyToShow = document.getElementById(caseStudyId);
+    caseStudyToShow.style.display = 'block';
+  });
+</script>
