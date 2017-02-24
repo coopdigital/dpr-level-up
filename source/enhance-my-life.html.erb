@@ -11,11 +11,9 @@ title:
   <input type="radio" name="enhancement" value="beer"><label for="beer">Drink one less beer per week</label></input>
 </form>
 
-<p>
-  [graph which goes up and to the right, changes depending what you click on]
-</p>
+<img class="visuallyhidden" id="graph-image" style="max-width: 100%" src="images/beer-graph.png"></img>
 
-<a href="add-to-your-pot">Show me how £60 will enhance my life</a>
+<a class="visuallyhidden" id="show-me-button" href="add-to-your-pot">...</a>
 
 <script>
 
@@ -23,10 +21,12 @@ var enhancements = [
   {'id': 'coffee',
    'friendlyName': 'one coffee each week day',
    'monthlyValue': '£60',
+   'imagePath': 'coffee-graph.png',
   },
   {'id': 'beer',
    'friendlyName': 'four beers each weekend',
    'monthlyValue': '£80',
+   'imagePath': 'beer-graph.png',
   }
 ];
 
@@ -38,12 +38,34 @@ ready(function() {
   }
 });
 
+function getEnhancementById(id) {
+  for(var i = 0 ; i < enhancements.length; ++i) {
+    if(enhancements[i].id == id) {
+      return enhancements[i];
+    }
+  }
+
+  console.error("no enhancement with id `" + id + "`");
+}
 
 function handleRadioClick(event) {
   console.log(event.target.value);
 
-  setCurrentEnhancement();
+  setCurrentEnhancement(getEnhancementById(event.target.value));
+}
 
+function setCurrentEnhancement(enhancement) {
+  var showMeButton = document.getElementById('show-me-button'),
+      graphImg = document.getElementById('graph-image');
+
+  console.log(enhancement);
+
+
+  showMeButton.innerHTML = 'Show me how ' + enhancement.monthlyValue + ' a month will enhance my life';
+  graphImg.src = '/images/' + enhancement.imagePath;
+
+  removeClass(showMeButton, 'visuallyhidden');
+  removeClass(graphImg, 'visuallyhidden');
 
 }
 
