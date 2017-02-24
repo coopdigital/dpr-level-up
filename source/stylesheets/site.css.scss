@@ -1,7 +1,32 @@
+.pure-g > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .l-box {
   padding: 1em;
 }
 
+.enhancement-box {
+  width: 33%;
+  padding-right: 0.5em;
+  &:last-child {
+    padding-right: 0em;
+  }
+}
+
+.enhancement {
+  border: 1px solid red;
+  padding: 0.5em;
+  height: 100px;
+  margin-bottom: 1em;
+}
+
 .is-centered {
   text-align: center;
+}
+
+.visuallyhidden {
+  display: none;
 }

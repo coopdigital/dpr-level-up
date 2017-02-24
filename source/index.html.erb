@@ -7,9 +7,7 @@ title: Level Up
 
 <% goals.each do |goal| %>
   <p>
-    <a href="well-done-set-a-goal" class='set-goal' id="<%= goal[:id] %>">
-      <%= goal[:friendlyTitle] %>
-    </a>
+    <%= link_to(goal[:friendlyTitle], "well-done-set-a-goal", :class => "set-goal", :id => goal[:id] ) %>
   </p>
 <% end %>
 
