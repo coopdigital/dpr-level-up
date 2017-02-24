@@ -11,6 +11,8 @@ title:
 You could grow your pot using the <span id="enhancement-monthly-amount">£...</span> a month you're currently spending on <span id="enhancement-name">...</span>.
 <p>
 
+<img id="graph-image" style="max-width: 100%"></img>
+
 <h2>Did you know?</h2>
 
 <p>
@@ -29,14 +31,15 @@ ready(function() {
     var enhancementNameSpan = document.getElementById('enhancement-name'),
         enhancementMonthlyAmount = document.getElementById('enhancement-monthly-amount'),
         enhancementMoneyPerTime = document.getElementById('enhancement-money-per-time'),
-        enhancementIncomeTwentyYears = document.getElementById('enhancement-income-20-years');
+        enhancementIncomeTwentyYears = document.getElementById('enhancement-income-20-years'),
+        graphImg = document.getElementById('graph-image');
 
   enhancementNameSpan.innerHTML = getEnhancementProperty('friendlyName');
   enhancementMonthlyAmount.innerHTML = getEnhancementProperty('monthlyAmount');
   enhancementMoneyPerTime.innerHTML = getEnhancementProperty('moneyPerTime');
   enhancementIncomeTwentyYears.innerHTML = getEnhancementProperty('incomeTwentyYears');
 
-
+  graphImg.src = '../images/' + getEnhancementProperty('imagePath');
 
 });
 
