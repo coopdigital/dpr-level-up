@@ -6,13 +6,45 @@ title:
   Select an enhancement
 </h1>
 
-<ul>
-  <li>Make your own coffee, sack Starbucks</li>
-  <li>Drink one less beer per week</li>
-</ul>
+<form>
+  <input type="radio" name="enhancement" value="coffee"><label for="coffee">Make your own coffee, sack Starbucks</label></input><br>
+  <input type="radio" name="enhancement" value="beer"><label for="beer">Drink one less beer per week</label></input>
+</form>
 
 <p>
   [graph which goes up and to the right, changes depending what you click on]
 </p>
 
 <a href="add-to-your-pot">Show me how £60 will enhance my life</a>
+
+<script>
+
+var enhancements = [
+  {'id': 'coffee',
+   'friendlyName': 'one coffee each week day',
+   'monthlyValue': '£60',
+  },
+  {'id': 'beer',
+   'friendlyName': 'four beers each weekend',
+   'monthlyValue': '£80',
+  }
+];
+
+ready(function() {
+  var allRadios = document.getElementsByName('enhancement');
+
+  for(var i = 0; i < allRadios.length; ++i) {
+    allRadios[i].addEventListener('click', handleRadioClick);
+  }
+});
+
+
+function handleRadioClick(event) {
+  console.log(event.target.value);
+
+  setCurrentEnhancement();
+
+
+}
+
+</script>
