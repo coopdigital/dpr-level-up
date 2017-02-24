@@ -13,7 +13,6 @@ title: Level Up
   </p>
 <% end %>
 
-
 <script>
   function ready(fn) {
     if (document.readyState != 'loading'){
@@ -28,10 +27,10 @@ title: Level Up
   }
 
   ready(function() {
-    var sackBossLinks = document.getElementsByClassName('set-goal');
-    for (var i = 0; i < sackBossLinks.length; i++) {
-      sackBossLink = sackBossLinks[i];
-      sackBossLink.addEventListener('click', function(event) {
+    var goalLinks = document.getElementsByClassName('set-goal');
+    for (var i = 0; i < goalLinks.length; i++) {
+      goalLink = goalLinks[i];
+      goalLink.addEventListener('click', function(event) {
         writeGoal(event.target.id);
       });
     }
