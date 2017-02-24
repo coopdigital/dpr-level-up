@@ -8,14 +8,26 @@ title:
 
 <form>
   <div class="enhancement">
-    <input type="radio" name="enhancement" value="coffee" id="coffee">
-      <label for="coffee">Sack Starbucks, brew your own third-wave coffee</label>
+    <input type="radio" name="enhancement" value="coffee" id="coffee" class="enhancement-radio">
+      <label for="coffee" class="enhancement-label">
+        <div class="copy">
+          <h3>Sack Starbucks</h3>
+          <p>Brew your own third-wave coffee</p>
+        </div>
+        <img src="/images/coffee.png" class="enhancement-image" />
+      </label>
     </input>
   </div>
 
   <div class="enhancement">
-    <input type="radio" name="enhancement" value="lunch" id="lunch">
-      <label for="lunch">Ditch the deli, bring your own healthy, home-made lunch</label>
+    <input type="radio" name="enhancement" value="lunch" id="lunch" class="enhancement-radio">
+      <label for="lunch" class="enhancement-label">
+        <div class="copy">
+          <h3>Ditch the deli</h3>
+          <p>Bring your own healthy, home-made lunch</p>
+        </div>
+        <img src="/images/sandwich.png" class="enhancement-image" />
+      </label>
     </input>
   </div>
 
@@ -66,6 +78,7 @@ function getEnhancementById(id) {
 
 function handleRadioClick(event) {
   console.log(event.target.value);
+  highlightEnhancementDiv(event.target.parentElement);
 
   setCurrentEnhancement(getEnhancementById(event.target.value));
 }
@@ -80,6 +93,24 @@ function setCurrentEnhancement(enhancement) {
   removeClass(showMeButton, 'visuallyhidden');
 
   localStorage.setItem("enhancement", JSON.stringify(enhancement));
+}
+
+function highlightEnhancementDiv(enhancementDiv) {
+  var enhancementDivs = document.getElementsByClassName('enhancement');
+  var className = 'highlighted';
+
+  for(var i = 0 ; i < enhancementDivs.length; ++i) {
+    var el = enhancementDivs[i]
+    if (el.classList)
+      el.classList.remove(className);
+    else
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  }
+
+  if (enhancementDiv.classList)
+    enhancementDiv.classList.add(className);
+  else
+    enhancementDiv.className += ' ' + className;
 }
 
 </script>
