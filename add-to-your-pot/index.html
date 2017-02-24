@@ -21,20 +21,68 @@
   Grow your pot
 </h1>
 
-<p>
-Your target is £1,500 per month
-</p>
 
 <p>
-By investing the coffee money (£60 per month) your pot will grow and
-create income in the future.
+You could grow your pot using the <span id="enhancement-monthly-amount">£...</span> a month you're currently spending on <span id="enhancement-name">...</span>.
+<p>
+
+<img id="graph-image" style="max-width: 100%"></img>
+
+<h2>That's an income of...</h2>
+<p>
+For only <span id="enhancement-money-per-time">...</span> you could earn:
 </p>
+
+<table>
+  <tbody>
+    <tr>
+      <td id="enhancement-income-ten-years">...</td>
+      <td>in 10 years</td>
+    </tr>
+
+    <tr>
+      <td id="enhancement-income-twenty-years">...</td>
+      <td>in 20 years</td>
+    </tr>
+
+    <tr>
+      <td id="enhancement-income-thirty-years">...</td>
+      <td>in 30 years</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>
-Did you know? That £3 per day can earn you £100 per month of income in 20 years time?
+That's a long way towards your goal of £1,500 per month.
 </p>
 
-<a href="../well-done-next-level/">Grow my pot by £60 per month</a>
+<a href="../well-done-next-level/">Grow my pot!</a>
+
+<script>
+
+ready(function() {
+    var enhancementNameSpan = document.getElementById('enhancement-name'),
+        enhancementMonthlyAmount = document.getElementById('enhancement-monthly-amount'),
+        enhancementMoneyPerTime = document.getElementById('enhancement-money-per-time'),
+        enhancementIncomeTenYears = document.getElementById('enhancement-income-ten-years'),
+        enhancementIncomeTwentyYears = document.getElementById('enhancement-income-twenty-years'),
+        enhancementIncomeThirtyYears = document.getElementById('enhancement-income-thirty-years'),
+        graphImg = document.getElementById('graph-image');
+
+  enhancementNameSpan.innerHTML = getEnhancementProperty('friendlyName');
+  enhancementMonthlyAmount.innerHTML = getEnhancementProperty('monthlyAmount');
+  enhancementMoneyPerTime.innerHTML = getEnhancementProperty('moneyPerTime');
+
+  enhancementIncomeTenYears.innerHTML = getEnhancementProperty('incomeTenYears') + ' per month';
+  enhancementIncomeTwentyYears.innerHTML = getEnhancementProperty('incomeTwentyYears') + ' per month';
+  enhancementIncomeThirtyYears.innerHTML = getEnhancementProperty('incomeThirtyYears') + ' per month';
+
+  graphImg.src = '../images/' + getEnhancementProperty('imagePath');
+
+});
+
+</script>
+
 
       </div>
     </div>
