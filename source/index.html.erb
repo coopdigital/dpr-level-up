@@ -5,28 +5,35 @@ title: Level Up
 <h1 class='is-centered'>Level Up</h1>
 <p>What do you want to achieve?</p>
 
-
-<form class="pure-form">
-  <label for="option-one" class="pure-radio">
-    <a href="well-done-set-a-goal">
-    Never have to answer to your boss again
+<% goals.each do |goal| %>
+  <p>
+    <a href="well-done-set-a-goal" class='set-goal' id="<%= goal[:id] %>">
+      <%= goal[:friendlyTitle] %>
     </a>
-  </label>
+  </p>
+<% end %>
 
-  <label for="option-two" class="pure-radio">
-    <a href="well-done-set-a-goal">
-    Never have to worry about money
-    </a>
-  </label>
 
-  <label for="option-three" class="pure-radio">
-    <a href="well-done-set-a-goal">
-    Choose the work you want to do
-    </a>
-  </label>
+<script>
+  function ready(fn) {
+    if (document.readyState != 'loading'){
+      fn();
+    } else {
+      document.addEventListener('DOMContentLoaded', fn);
+    }
+  }
 
-  <label for="option-four" class="pure-radio">
-    <a href="well-done-set-a-goal">
-    Spend all your time with the people you love
-    </a>
-  </label>
+  function writeGoal(goal) {
+    localStorage.setItem("goal", goal);
+  }
+
+  ready(function() {
+    var sackBossLinks = document.getElementsByClassName('set-goal');
+    for (var i = 0; i < sackBossLinks.length; i++) {
+      sackBossLink = sackBossLinks[i];
+      sackBossLink.addEventListener('click', function(event) {
+        writeGoal(event.target.id);
+      });
+    }
+  });
+</script>

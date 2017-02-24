@@ -56,3 +56,26 @@ activate :deploy do |deploy|
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
+
+helpers do
+  def goals
+    [
+      {
+        'friendlyTitle': 'Never have to answer to your boss again',
+        'id': 'sack-boss'
+      },
+      {
+        'friendlyTitle': 'Never have to worry about money',
+        'id': 'dont-worry-about-money'
+      },
+      {
+        'friendlyTitle': 'Choose the work you want to do',
+        'id': 'choose-your-work'
+      },
+      {
+        'friendlyTitle': 'Spend all your time with the people you love',
+        'id': 'spend-time-with-family'
+      }
+    ]
+  end
+end
