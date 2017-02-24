@@ -62,19 +62,23 @@ helpers do
     [
       {
         'friendlyTitle': 'Never have to answer to your boss again',
-        'id': 'sack-boss'
+        'id': 'sack-boss',
+        'congratsContent': "You're never going to have to work for them again!"
       },
       {
         'friendlyTitle': 'Never have to worry about money',
-        'id': 'dont-worry-about-money'
+        'id': 'dont-worry-about-money',
+        'congratsContent': "Worrying about money will be a thing of the past!"
       },
       {
         'friendlyTitle': 'Choose the work you want to do',
-        'id': 'choose-your-work'
+        'id': 'choose-your-work',
+        'congratsContent': "You'll be able to do what matters to you"
       },
       {
         'friendlyTitle': 'Spend all your time with the people you love',
-        'id': 'spend-time-with-family'
+        'id': 'spend-time-with-family',
+        'congratsContent': "You'll have all the time in the world for your loved ones"
       }
     ]
   end

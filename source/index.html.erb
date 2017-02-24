@@ -14,16 +14,19 @@ title: Level Up
 <% end %>
 
 <script>
-  function ready(fn) {
-    if (document.readyState != 'loading'){
-      fn();
-    } else {
-      document.addEventListener('DOMContentLoaded', fn);
+  var goals = <%= JSON(goals) %>;
+
+  function getGoalForId(id) {
+    for (var i = 0; i < goals.length; i++) {
+      if (goals[i].id == id) {
+        return goals[i];
+      }
     }
+    console.error('No goal found for id ' + id);
   }
 
   function writeGoal(goal) {
-    localStorage.setItem("goal", goal);
+    localStorage.setItem("goal", JSON.stringify(goal));
   }
 
   ready(function() {
@@ -31,7 +34,7 @@ title: Level Up
     for (var i = 0; i < goalLinks.length; i++) {
       goalLink = goalLinks[i];
       goalLink.addEventListener('click', function(event) {
-        writeGoal(event.target.id);
+        writeGoal(getGoalForId(event.target.id));
       });
     }
   });

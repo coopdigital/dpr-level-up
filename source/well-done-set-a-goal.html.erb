@@ -3,7 +3,8 @@ title: Level Up
 ---
 
 <h1 class='is-centered'>Well done, you've reached level [?]</h1>
-<p>What do you want to achieve?</p>
+
+<p id='congratsContent'></p>
 
 <p>
 [smiley face]
@@ -18,3 +19,9 @@ We'll start with small life enhancements.
 <a href="youre-not-alone">
   Get started
 </a>
+
+<script>
+  ready(function() {
+    document.getElementById('congratsContent').innerHTML = getGoalProperty('congratsContent');
+  });
+</script>
