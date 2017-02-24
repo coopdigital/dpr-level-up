@@ -12,6 +12,10 @@ function getGoalProperty(name) {
   return JSON.parse(localStorage.getItem('goal'))[name];
 }
 
+function getEnhancementProperty(name) {
+  return JSON.parse(localStorage.getItem('enhancement'))[name];
+}
+
 function removeClass(el, className) {
   if (el.classList)
     el.classList.remove(className);
