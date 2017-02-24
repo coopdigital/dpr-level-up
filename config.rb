@@ -63,22 +63,26 @@ helpers do
       {
         'friendlyTitle': 'Never have to answer to your boss again',
         'id': 'sack-boss',
-        'congratsContent': "You going to work for yourself, not somebody else"
+        'congratsContent': "You going to work for yourself, not somebody else.",
+        'mentorName': 'Marian'
       },
       {
         'friendlyTitle': 'Never have to worry about money',
         'id': 'dont-worry-about-money',
-        'congratsContent': "Thinking about money will be exciting, not frightening"
+        'congratsContent': "Thinking about money will be exciting, not frightening.",
+        'mentorName': 'Chris',
       },
       {
         'friendlyTitle': 'Choose the work you want to do',
         'id': 'choose-your-work',
-        'congratsContent': "You'll be able to do what matters to you"
+        'congratsContent': "You'll be able to do what matters to you.",
+        'mentorName': 'Marie',
       },
       {
         'friendlyTitle': 'Spend more your time with the people you love',
         'id': 'spend-time-with-family',
-        'congratsContent': "You'll have all the time in the world for your loved ones"
+        'congratsContent': "You'll have all the time in the world for your loved ones.",
+        'mentorName': 'Mark',
       }
     ]
   end

@@ -18,14 +18,21 @@ title: Level Up
 </p>
 
 <p>
-  It beings when you start to make small life enhancements.
+  It begins when you start to make small life enhancements.
 </p>
+
 <p>
-  But first, <%= link_to("Meet someone who's been here before", "youre-not-alone", class: 'pure-button pure-button-primary button-xlarge') %>.
+  But first, meet someone who's been here before.
+</p>
+
+<%= link_to("Get inspired", "youre-not-alone",
+            class: 'pure-button pure-button-primary button-xlarge',
+            :id => 'meetMentorButton') %>
 </p>
 
 <script>
   ready(function() {
     document.getElementById('congratsContent').innerHTML = getGoalProperty('congratsContent');
+    document.getElementById('meetMentorButton').innerHTML = 'Meet ' + getGoalProperty('mentorName');
   });
 </script>
