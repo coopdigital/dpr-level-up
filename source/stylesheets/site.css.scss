@@ -1,3 +1,16 @@
+@media (min-width:600px)  {
+  body {
+    background: #eee;
+    padding-top: 2em;
+  }
+  .mobile-fake {
+    background: white;
+    max-width: 412px;
+    margin: 0 auto;
+    outline: 1px solid black;
+  }
+}
+
 .pure-g > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
