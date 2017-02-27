@@ -1,31 +1,35 @@
-@media (min-width: 600px) {
-  body {
-    background: #eee;
-    padding-top: 2em; }
+.content-wrapper {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  border-radius: 0.2rem;
+  margin-bottom: 8rem; }
 
-  .mobile-fake {
-    background: white;
-    max-width: 412px;
-    margin: 0 auto;
-    outline: 1px solid black; } }
 body {
+  background: #eee;
+  background: white;
+  margin: 0 auto;
   font-family: 'Overpass', sans-serif;
   background: #CADCF1;
-  color: #131B43; }
+  color: #131B43;
+  font-size: 200%; }
   body p {
-    color: #131B43; }
+    font-family: 'Overpass', sans-serif;
+    color: #131B43;
+    font-size: 2rem; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Secular One', sans-serif;
   text-align: left;
-  line-height: 2.4rem; }
+  line-height: 3.8rem;
+  margin-bottom: 0; }
 
 body > h1:first-of-type {
   margin: 0;
   border-bottom: 1px solid #CADCF1;
   margin-bottom: 0.4rem;
   background: #131B43;
-  padding: 0.4rem 0;
+  padding: 1rem 0;
   display: block; }
   body > h1:first-of-type span:nth-of-type(1) {
     color: #00B1C4; }
@@ -34,13 +38,6 @@ body > h1:first-of-type {
 
 .pure-button-primary {
   background: #06D57E !important; }
-
-.content-wrapper {
-  max-width: 640px;
-  margin: auto;
-  background: white;
-  margin: 0.4rem;
-  border-radius: 0.2rem; }
 
 .pure-g > div {
   -webkit-box-sizing: border-box;
@@ -59,8 +56,9 @@ body > h1:first-of-type {
 .enhancement {
   border: 3px solid #dddddd;
   padding: 0.5em;
-  height: 130px;
-  margin-bottom: 1em; }
+  height: 300px;
+  margin-bottom: 1em;
+  margin-top: 2rem; }
 
 .highlighted {
   border: 3px solid #06D57E; }
@@ -72,7 +70,8 @@ body > h1:first-of-type {
   display: none; }
 
 #congratsContent {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  line-height: 4rem; }
 
 img.mentor-image {
   max-width: 100%; }
@@ -116,7 +115,8 @@ table {
   padding-left: 1em; }
 
 .enhancement-image {
-  float: right; }
+  float: right;
+  width: 40%; }
 
 .circle {
   border-radius: 50%;
