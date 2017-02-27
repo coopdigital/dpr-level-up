@@ -1,3 +1,13 @@
+@media (min-width: 600px) {
+  body {
+    background: #eee;
+    padding-top: 2em; }
+
+  .mobile-fake {
+    background: white;
+    max-width: 412px;
+    margin: 0 auto;
+    outline: 1px solid black; } }
 .pure-g > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -27,6 +37,9 @@
 .visuallyhidden {
   display: none; }
 
+img.mentor-image {
+  max-width: 100%; }
+
 table {
   width: 100%; }
   table td.income-amount {
@@ -39,7 +52,9 @@ table {
   width: 100%; }
 
 .button-xlarge {
-  font-size: 125%;
+  font-size: 125%; }
+
+.pure-button {
   width: 100%; }
 
 .well-done-image {
