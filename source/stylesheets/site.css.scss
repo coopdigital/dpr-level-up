@@ -21,11 +21,15 @@ body {
   font-family: 'Overpass', sans-serif;
   background: $light-blue;
   color: $dark-blue;
+  p {
+      color: $dark-blue;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Secular One', sans-serif;
   text-align: left;
+  line-height: 2.4rem;
 }
 
 body {
