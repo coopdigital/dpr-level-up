@@ -33,15 +33,20 @@
 </p>
 
 <p>
-  It beings when you start to make small life enhancements.
+  It begins when you start to make small life enhancements.
 </p>
+
 <p>
-  But first, <a href="../youre-not-alone/" class="pure-button pure-button-primary button-xlarge">Meet someone who's been here before</a>.
+  But first, meet someone who's been here before.
+</p>
+
+<a href="../youre-not-alone/" class="pure-button pure-button-primary button-xlarge" id="meetMentorButton">Get inspired</a>
 </p>
 
 <script>
   ready(function() {
     document.getElementById('congratsContent').innerHTML = getGoalProperty('congratsContent');
+    document.getElementById('meetMentorButton').innerHTML = 'Meet ' + getGoalProperty('mentorName');
   });
 </script>
 

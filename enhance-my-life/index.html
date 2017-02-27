@@ -18,19 +18,31 @@
     <div class="content-wrapper">
       <div class="content l-box">
         <h1>
-  Select an enhancement
+  Let's ditch something
 </h1>
 
 <form>
   <div class="enhancement">
-    <input type="radio" name="enhancement" value="coffee" id="coffee">
-      <label for="coffee">Sack Starbucks, brew your own third-wave coffee</label>
+    <input type="radio" name="enhancement" value="coffee" id="coffee" class="enhancement-radio">
+      <label for="coffee" class="enhancement-label">
+        <div class="copy">
+          <h3>Sack Starbucks</h3>
+          <p>Brew your own third-wave coffee</p>
+        </div>
+        <img src="../images/coffee.png" class="enhancement-image" />
+      </label>
     </input>
   </div>
 
   <div class="enhancement">
-    <input type="radio" name="enhancement" value="lunch" id="lunch">
-      <label for="lunch">Ditch the deli, bring your own healthy, home-made lunch</label>
+    <input type="radio" name="enhancement" value="lunch" id="lunch" class="enhancement-radio">
+      <label for="lunch" class="enhancement-label">
+        <div class="copy">
+          <h3>Ditch the deli</h3>
+          <p>Bring your own healthy, home-made lunch</p>
+        </div>
+        <img src="../images/sandwich.png" class="enhancement-image" />
+      </label>
     </input>
   </div>
 
@@ -42,6 +54,7 @@
 
 var enhancements = [
   {'id': 'coffee',
+   'shortName': 'coffee',
    'friendlyName': 'one coffee a day',
    'moneyPerTime': '£3 a day',
    'monthlyAmount': '£60',
@@ -51,7 +64,8 @@ var enhancements = [
    'imagePath': 'coffee-graph.png',
   },
   {'id': 'lunch',
-   'friendlyName': 'lunch a day',
+   'shortName': 'lunch',
+   'friendlyName': 'lunch out every day',
    'moneyPerTime': '£6 a day',
    'monthlyAmount': '£120',
    'incomeTenYears': '£66',
@@ -81,6 +95,7 @@ function getEnhancementById(id) {
 
 function handleRadioClick(event) {
   console.log(event.target.value);
+  highlightEnhancementDiv(event.target.parentElement);
 
   setCurrentEnhancement(getEnhancementById(event.target.value));
 }
@@ -90,11 +105,29 @@ function setCurrentEnhancement(enhancement) {
 
   console.log(enhancement);
 
-  showMeButton.innerHTML = 'Show me how ' + enhancement.moneyPerTime + ' can change my life';
+  showMeButton.innerHTML = 'Show me what ' + enhancement.moneyPerTime + ' is really worth';
 
   removeClass(showMeButton, 'visuallyhidden');
 
   localStorage.setItem("enhancement", JSON.stringify(enhancement));
+}
+
+function highlightEnhancementDiv(enhancementDiv) {
+  var enhancementDivs = document.getElementsByClassName('enhancement');
+  var className = 'highlighted';
+
+  for(var i = 0 ; i < enhancementDivs.length; ++i) {
+    var el = enhancementDivs[i]
+    if (el.classList)
+      el.classList.remove(className);
+    else
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  }
+
+  if (enhancementDiv.classList)
+    enhancementDiv.classList.add(className);
+  else
+    enhancementDiv.className += ' ' + className;
 }
 
 </script>
