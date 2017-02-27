@@ -100,6 +100,17 @@ table {
   }
 }
 
+.mentor-description {
+  margin-top: 0;
+  padding-left: 1em;
+}
+
 .enhancement-image {
   float: right;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 100;
+  height: 100;
 }
