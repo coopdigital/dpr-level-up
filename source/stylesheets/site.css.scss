@@ -1,3 +1,42 @@
+$light-blue: #CADCF1;
+$dark-blue: #090D24;
+$seablue: #00B1C4;
+$green: #06D57E;
+$yellow: #DCF600;
+
+body {
+  font-family: 'Overpass', sans-serif;
+  background: $light-blue;
+  color: $dark-blue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Secular One', sans-serif;
+  text-align: left;
+}
+
+div.content {
+  > h1 {
+    &:first-of-type {
+      margin: 0;
+      border-bottom: 1px solid $light-blue;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.pure-button-primary {
+  background: $green !important;
+}
+
+.content-wrapper {
+  max-width: 640px;
+  margin: auto;
+  background: white;
+  margin: 0.4rem;
+  border-radius: 0.2rem;
+}
+
 .pure-g > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

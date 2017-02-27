@@ -6,6 +6,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css?family=Overpass|Secular+One" rel="stylesheet">
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Level Up" %></title>
 
@@ -17,6 +19,7 @@
   <body class="<%= page_classes %>">
     <div class="content-wrapper">
       <div class="content l-box">
+        <h1 class='is-centered'>Level Up</h1>
         <%= yield %>
       </div>
     </div>
