@@ -8,13 +8,39 @@
         <g id="Lunch-graph">
             <rect id="Rectangle" fill="#ECF2FA" x="0" y="0" width="560" height="376" rx="8"></rect>
             <rect id="Rectangle-2" fill="#FFFFFF" x="40" y="39" width="480" height="298" rx="8"></rect>
+            <rect id="Rectangle-3-Copy" fill="#ECF2F9" x="356" y="35" width="2" height="309" rx="1"></rect>
+            <rect id="Rectangle-3-Copy-2" fill="#ECF2F9" x="191" y="35" width="2" height="309" rx="1"></rect>
             <path d="M38.796875,338.5 C38.796875,338.5 352.515625,305.652344 520.394531,113.957031" id="Path-2" stroke="#06D57E" stroke-width="8" stroke-linecap="round"></path>
-            <circle id="Oval" fill="#DCF600" cx="188" cy="305" r="9"></circle>
-            <circle id="Oval" fill="#131B43" cx="188" cy="305" r="5"></circle>
-            <circle id="Oval-Copy" fill="#DCF600" cx="353" cy="240" r="9"></circle>
+            <circle id="Oval" fill="#DCF600" cx="192" cy="305" r="9"></circle>
+            <circle id="Oval" fill="#131B43" cx="192" cy="305" r="5"></circle>
+            <circle id="Oval-Copy" fill="#DCF600" cx="357" cy="240" r="9"></circle>
             <circle id="Oval-Copy-2" fill="#DCF600" cx="520" cy="114" r="9"></circle>
-            <circle id="Oval-Copy-3" fill="#131B43" cx="353" cy="240" r="5"></circle>
+            <circle id="Oval-Copy-3" fill="#131B43" cx="357" cy="240" r="5"></circle>
             <circle id="Oval-Copy-4" fill="#131B43" cx="520" cy="114" r="5"></circle>
+            <text id="10" font-family="Overpass-Regular, Overpass" font-size="14" font-weight="normal" fill="#131E4B">
+                <tspan x="184.416" y="362">10</tspan>
+            </text>
+            <text id="£66" font-family="Overpass-Regular, Overpass" font-size="14" font-weight="normal" fill="#131E4B">
+                <tspan x="178.963" y="281">£66</tspan>
+            </text>
+            <text id="Years" font-family="Overpass-Regular, Overpass" font-size="14" font-weight="normal" fill="#131E4B">
+                <tspan x="40.084" y="362">Years</tspan>
+            </text>
+            <text id="20" font-family="Overpass-Regular, Overpass" font-size="14" font-weight="normal" fill="#131E4B">
+                <tspan x="347.243" y="362">20</tspan>
+            </text>
+            <text id="£197" font-family="Overpass-Regular, Overpass" font-size="14" font-weight="normal" fill="#131E4B">
+                <tspan x="341.877" y="215">£197</tspan>
+            </text>
+            <text id="£453" font-family="Overpass-Regular, Overpass" font-size="14" font-weight="normal" fill="#131E4B">
+                <tspan x="502.413" y="92">£453</tspan>
+            </text>
+            <text id="30" font-family="Overpass-Regular, Overpass" font-size="14" font-weight="normal" fill="#131E4B">
+                <tspan x="510.813" y="362">30</tspan>
+            </text>
+            <text id="Monthly-passive-inco" transform="translate(23.000000, 113.000000) rotate(-90.000000) translate(-23.000000, -113.000000) " font-family="Overpass-Regular, Overpass" font-size="14" font-weight="normal" fill="#131E4B">
+                <tspan x="-51.998" y="118">Monthly passive income</tspan>
+            </text>
         </g>
     </g>
 </svg>

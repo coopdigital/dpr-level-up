@@ -4,32 +4,34 @@ $seablue: #00B1C4;
 $green: #06D57E;
 $yellow: #DCF600;
 
-@media (min-width:600px)  {
-  body {
-    background: #eee;
-    padding-top: 2em;
-  }
-  .mobile-fake {
-    background: white;
-    max-width: 412px;
-    margin: 0 auto;
-    outline: 1px solid black;
-  }
+.content-wrapper {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  border-radius: 0.2rem;
+  margin-bottom: 8rem;
 }
 
 body {
+  background: #eee;
+  background: white;
+  margin: 0 auto;
   font-family: 'Overpass', sans-serif;
   background: $light-blue;
   color: $dark-blue;
   p {
+      font-family: 'Overpass', sans-serif;
       color: $dark-blue;
+      font-size: 2rem;
   }
+  font-size: 200%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Secular One', sans-serif;
   text-align: left;
-  line-height: 2.4rem;
+  line-height: 3.8rem;
+  margin-bottom: 0;
 }
 
 body {
@@ -39,7 +41,7 @@ body {
       border-bottom: 1px solid $light-blue;
       margin-bottom: 0.4rem;
       background: $dark-blue;
-      padding: 0.4rem 0;
+      padding: 1rem 0;
       display: block;
       span {
         &:nth-of-type(1) {
@@ -57,13 +59,7 @@ body {
   background: $green !important;
 }
 
-.content-wrapper {
-  max-width: 640px;
-  margin: auto;
-  background: white;
-  margin: 0.4rem;
-  border-radius: 0.2rem;
-}
+
 
 .pure-g > div {
   -webkit-box-sizing: border-box;
@@ -84,10 +80,11 @@ body {
 }
 
 .enhancement {
-  border: 3px solid #dddddd;
-  padding: 0.5em;
-  height: 130px;
-  margin-bottom: 1em;
+    border: 3px solid #dddddd;
+    padding: 0.5em;
+    height: 300px;
+    margin-bottom: 1em;
+    margin-top: 2rem;
 }
 
 .highlighted {
@@ -104,6 +101,7 @@ body {
 
 #congratsContent {
   font-size: 1.8em;
+  line-height: 4rem;
 }
 
 img.mentor-image {
@@ -164,6 +162,7 @@ table {
 
 .enhancement-image {
   float: right;
+  width: 40%;
 }
 
 .circle {
