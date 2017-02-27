@@ -8,6 +8,40 @@
     max-width: 412px;
     margin: 0 auto;
     outline: 1px solid black; } }
+body {
+  font-family: 'Overpass', sans-serif;
+  background: #CADCF1;
+  color: #131B43; }
+  body p {
+    color: #131B43; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Secular One', sans-serif;
+  text-align: left;
+  line-height: 2.4rem; }
+
+body > h1:first-of-type {
+  margin: 0;
+  border-bottom: 1px solid #CADCF1;
+  margin-bottom: 0.4rem;
+  background: #131B43;
+  padding: 0.4rem 0;
+  display: block; }
+  body > h1:first-of-type span:nth-of-type(1) {
+    color: #00B1C4; }
+  body > h1:first-of-type span:nth-of-type(2) {
+    color: #DCF600; }
+
+.pure-button-primary {
+  background: #06D57E !important; }
+
+.content-wrapper {
+  max-width: 640px;
+  margin: auto;
+  background: white;
+  margin: 0.4rem;
+  border-radius: 0.2rem; }
+
 .pure-g > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -23,19 +57,22 @@
     padding-right: 0em; }
 
 .enhancement {
-  border: 1px solid #666666;
+  border: 3px solid #dddddd;
   padding: 0.5em;
-  height: 100px;
+  height: 130px;
   margin-bottom: 1em; }
 
 .highlighted {
-  background: #B3FCE3; }
+  border: 3px solid #06D57E; }
 
 .is-centered {
   text-align: center; }
 
 .visuallyhidden {
   display: none; }
+
+#congratsContent {
+  font-size: 1.8em; }
 
 img.mentor-image {
   max-width: 100%; }
@@ -74,5 +111,14 @@ table {
     .enhancement-label .copy h3 {
       margin-top: 0.5em; }
 
+.mentor-description {
+  margin-top: 0;
+  padding-left: 1em; }
+
 .enhancement-image {
   float: right; }
+
+.circle {
+  border-radius: 50%;
+  width: 100;
+  height: 100; }

@@ -6,6 +6,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link href="https://fonts.googleapis.com/css?family=Overpass|Secular+One" rel="stylesheet">
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Level Up</title>
 
@@ -14,35 +16,62 @@
     <script src="../javascripts/site.js"></script>
   </head>
 
+  <h1 class='is-centered'><span>Level</span> <span>Up</span></h1>
   <body class="view-your-pot view-your-pot_index">
     <div class="mobile-fake">
       <div class="content-wrapper">
         <div class="content l-box">
           <h1>
-  Your pot
+  Level 3: connect with <span class="mentor-name">...</span>
 </h1>
 
 <p>
-[something about what income your pot is / will be making]
+Your mentor <span class="mentor-name">...</span> is there for you on your journey to financial freedom. Mentors aren't experts, but they have grown their passive income by cutting spending, and can be there with a friendly word of encouragement when you need it.
 </p>
 
 <p>
-Your target is £1,500 per month
+  <span class="mentor-name">...</span> will check in with you in a month and make sure you're on target to meet your goals.
 </p>
 
-You'll be able to sack your boss in 24 years.
+<label for="email">Enter your email address
+  <input placeholder="name@example.com" id="email"style="width: 100%;" type="email"></input>
+</label>
 
-<h2>Get there faster!</h2>
+<p>
+  <a href="#" class="pure-button pure-button-primary button-xlarge" id="connect-button">Connect with ...</a>
+</p>
+
+<h2>In the meantime</h2>
+
+<p>
+  Here are some ways you grow your passive income faster.
+</p>
 
 <ul>
   <li>
-    <a href="#">Make more life enhancements</a>
+    <a href="#">Do you really need a car?</a>
   </li>
 
   <li>
     <a href="#">Take on a second job</a>
   </li>
 </ul>
+
+
+
+<script>
+  ready(function() {
+      var mentorNameElements = document.getElementsByClassName('mentor-name'),
+          connectButton = document.getElementById('connect-button'),
+          mentorName = getGoalProperty('mentorName');
+
+    connectButton.innerHTML = 'Connect with ' + mentorName;
+
+    for(var i=0 ; i < mentorNameElements.length; ++i) {
+      mentorNameElements[i].innerHTML = mentorName;
+    }
+  });
+</script>
 
         </div>
       </div>
