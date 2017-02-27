@@ -79,7 +79,7 @@ helpers do
         'mentorName': 'Marie',
       },
       {
-        'friendlyTitle': 'Spend more your time with the people you love',
+        'friendlyTitle': 'Spend more time with the people you love',
         'id': 'spend-time-with-family',
         'congratsContent': "You'll have all the time in the world for your loved ones.",
         'mentorName': 'Mark',
