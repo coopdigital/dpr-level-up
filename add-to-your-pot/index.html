@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass|Secular+One" rel="stylesheet">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Level Up</title>
+
+    <link href="../stylesheets/pure-min.css" rel="stylesheet" />
+    <link href="../stylesheets/site.css" rel="stylesheet" />
+    <script src="../javascripts/site.js"></script>
+  </head>
+
+  <h1 class='is-centered'><span>Level</span> <span>Up</span></h1>
+  <body class="add-to-your-pot add-to-your-pot_index">
+    <div class="mobile-fake">
+      <div class="content-wrapper">
+        <div class="content l-box">
+          <h1>
+  The real value of <span class="enhancement-name">...</span>
+</h1>
+
+<p>
+  Typically people spend <span id="enhancement-monthly-amount">£...</span> a month on <span class="enhancement-name">...</span>.
+<p>
+
+<p>
+  Rather than making someone else rich, you could put that money to work for you.
+</p>
+
+<img id="graph-image" style="max-width: 100%"></img>
+
+<h2>If you invested <span id="enhancement-money-per-time">...</span></h2>
+
+<p>
+You would start getting a <b>passive income</b>. That's money you earn without working.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>passive income</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>in 10 years</td>
+      <td class="income-amount" id="enhancement-income-ten-years">...</td>
+    </tr>
+
+    <tr>
+      <td>in 20 years</td>
+      <td class="income-amount" id="enhancement-income-twenty-years">...</td>
+    </tr>
+
+    <tr>
+      <td>in 30 years</td>
+      <td class="income-amount" id="enhancement-income-thirty-years">...</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+On its own, this might not seem like much.
+</p>
+
+<p>
+But making many small tweaks like this adds up to a life-changing amount of money.
+</p>
+
+<a href="../well-done-next-level/" class="pure-button pure-button-primary button-xlarge" id="ditch-button">Ditch the ...</a>
+
+<script>
+
+ready(function() {
+    var enhancementNameSpan = document.getElementById('enhancement-name'),
+        enhancementNameElements = document.getElementsByClassName('enhancement-name'),
+        enhancementMonthlyAmount = document.getElementById('enhancement-monthly-amount'),
+        enhancementMoneyPerTime = document.getElementById('enhancement-money-per-time'),
+        enhancementIncomeTenYears = document.getElementById('enhancement-income-ten-years'),
+        enhancementIncomeTwentyYears = document.getElementById('enhancement-income-twenty-years'),
+        enhancementIncomeThirtyYears = document.getElementById('enhancement-income-thirty-years'),
+        graphImg = document.getElementById('graph-image'),
+        ditchButton = document.getElementById('ditch-button');
+
+  for(var i=0; i < enhancementNameElements.length ; ++i) {
+    enhancementNameElements[i].innerHTML = getEnhancementProperty('shortName');
+  }
+  enhancementMonthlyAmount.innerHTML = getEnhancementProperty('monthlyAmount');
+  enhancementMoneyPerTime.innerHTML = getEnhancementProperty('moneyPerTime');
+
+  enhancementIncomeTenYears.innerHTML = getEnhancementProperty('incomeTenYears') + ' per month';
+  enhancementIncomeTwentyYears.innerHTML = getEnhancementProperty('incomeTwentyYears') + ' per month';
+  enhancementIncomeThirtyYears.innerHTML = getEnhancementProperty('incomeThirtyYears') + ' per month';
+
+  ditchButton.innerHTML = 'Ditch the ' + getEnhancementProperty('shortName');
+
+  graphImg.src = '../images/' + getEnhancementProperty('imagePath');
+
+});
+
+</script>
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

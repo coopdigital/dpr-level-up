@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass|Secular+One" rel="stylesheet">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Level Up</title>
+
+    <link href="../stylesheets/pure-min.css" rel="stylesheet" />
+    <link href="../stylesheets/site.css" rel="stylesheet" />
+    <script src="../javascripts/site.js"></script>
+  </head>
+
+  <h1 class='is-centered'><span>Level</span> <span>Up</span></h1>
+  <body class="well-done-next-level well-done-next-level_index">
+    <div class="mobile-fake">
+      <div class="content-wrapper">
+        <div class="content l-box">
+          <img src="../images/level-2.svg" class="level-image" />
+
+<h1 class='is-centered'>Level 2: achieved</h1>
+
+<img src="../images/well-done.svg" class="well-done-image" />
+
+<p>
+  You've committed to growing your pot by <span id="enhancement-monthly-amount">...</span> per month.
+</p>
+
+<p>
+Over time this will turn into income that is paid to you, without working.
+</p>
+
+
+<a href="../view-your-pot/" class="pure-button pure-button-primary button-xlarge">Grow your passive income</a>
+
+<script>
+
+ready(function() {
+  var enhancementMonthlyAmount = document.getElementById('enhancement-monthly-amount');
+
+  enhancementMonthlyAmount.innerHTML = getEnhancementProperty('monthlyAmount');
+});
+
+</script>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

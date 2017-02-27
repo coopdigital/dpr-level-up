@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="230px" height="56px" viewBox="0 0 230 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>level-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="level-2">
+            <circle id="Oval" fill="#CADCF1" cx="114.5" cy="27.5" r="27.5"></circle>
+            <circle id="Oval" fill="#CADCF1" cx="35.5" cy="27.5" r="19.5"></circle>
+            <circle id="Oval" fill="#CADCF1" cx="193.5" cy="27.5" r="19.5"></circle>
+            <rect id="Rectangle" fill="#CADCF1" x="0" y="23" width="230" height="9"></rect>
+            <circle id="Oval-2" fill="#06D57E" cx="114.5" cy="27.5" r="21.5"></circle>
+            <text id="2" font-family="Avenir-Heavy, Avenir" font-size="38" font-weight="600" fill="#FFFFFF">
+                <tspan x="103.752" y="40">2</tspan>
+            </text>
+            <circle id="Oval-2" fill="#06D57E" cx="35.5" cy="27.5" r="14.5"></circle>
+            <circle id="Oval-2" stroke="#979797" fill="#FFFFFF" cx="193.5" cy="27.5" r="14.5"></circle>
+            <text id="3" font-family="Avenir-Heavy, Avenir" font-size="20" font-weight="600" fill="#878787">
+                <tspan x="187.08" y="35">3</tspan>
+            </text>
+            <text id="1\" font-family="Avenir-Heavy, Avenir" font-size="20" font-weight="600" fill="#B6FF64">
+                <tspan x="29.58" y="35">1</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
