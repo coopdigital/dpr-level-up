@@ -1,5 +1,5 @@
 $light-blue: #CADCF1;
-$dark-blue: #090D24;
+$dark-blue: #131B43;
 $seablue: #00B1C4;
 $green: #06D57E;
 $yellow: #DCF600;
@@ -28,12 +28,23 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
 }
 
-div.content {
+body {
   > h1 {
     &:first-of-type {
       margin: 0;
       border-bottom: 1px solid $light-blue;
-      margin-bottom: 1rem;
+      margin-bottom: 0.4rem;
+      background: $dark-blue;
+      padding: 0.4rem 0;
+      display: block;
+      span {
+        &:nth-of-type(1) {
+          color: $seablue;
+        }
+        &:nth-of-type(2) {
+          color: $yellow;
+        }
+      }
     }
   }
 }
