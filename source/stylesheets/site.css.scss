@@ -36,6 +36,14 @@
 }
 
 table {
+  td.income-amount {
+    text-align: right;
+  }
+
+  th {
+    text-align: right;
+    padding-bottom: 0.5em;
+  }
   width: 100%;
 }
 
