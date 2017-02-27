@@ -17,10 +17,14 @@
 }
 
 .enhancement {
-  border: 1px solid red;
+  border: 1px solid #666666;
   padding: 0.5em;
   height: 100px;
   margin-bottom: 1em;
+}
+
+.highlighted {
+  background: #B3FCE3;
 }
 
 .is-centered {
@@ -48,4 +52,25 @@ table {
   display: block;
   width: 70%;
   margin: 0 auto;
+}
+
+.enhancement-radio {
+  display: none;
+}
+
+.enhancement-label {
+  width: 100%;
+  height: 100%;
+
+  .copy {
+    width: 60%;
+    float: left;
+    h3 {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+.enhancement-image {
+  float: right;
 }
