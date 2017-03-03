@@ -124,4 +124,5 @@ table {
   height: 100; }
 
 .set-goal {
-  background: #DCF600; }
+  background: #DCF600;
+  white-space: normal; }
